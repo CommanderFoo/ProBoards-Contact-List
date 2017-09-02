@@ -159,7 +159,7 @@ class Contact_List {
 			}
 
 			contacts.sort((a, b) => {
-				if(a.online < b.name){
+				if(a.name < b.name){
 					return -1;
 				} else if(b.name < a.name){
 					return 1
