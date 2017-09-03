@@ -139,6 +139,10 @@ class Contact_List {
 		let data = pb.plugin.key(this.PLUGIN_KEY).get() || {};
 
 		if(data){
+
+			// The selector below is where the plugin scrapes for info.  This is the online list
+			// that shows up on a lot of pages.
+
 			let $online = $("#thecreed-online-list");
 			let local_data = this.get_local_data();
 			let $html = $("<div id='the-contact-list'></div>");
@@ -177,6 +181,8 @@ class Contact_List {
 			if(!contacts.length){
 				$html.append("<span><em>No Contacts</em></span>");
 			}
+
+			// Selector below is where the list is wrote too.
 
 			$("#yourcontacts-disp").append($html);
 		}
